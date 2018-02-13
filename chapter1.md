@@ -1,8 +1,14 @@
-# The Jabberwocky
+# About This Document
 
-\`Twas brillig, and the slithy toves  
-  Did gyre and gimble in the wabe:  
-All mimsy were the borogoves,  
-  And the mome raths outgrabe.
+{% include "git+https://github.com/safesoftware/FMETraining/blob/master/DesktopBasic0Introduction/0.00.CourseIntroduction.md" %}
 
-{% include "./chapter2.md" %}
+<!-- https://safe-software.gitbooks.io/fme-desktop-basic-training-2018/content/DesktopBasic0Introduction/0.00.CourseIntroduction.html
+
+https://www.gitbook.com/book/safe-software/fme-desktop-basic-training-2018.git/README.md#Desktop-Advanced-2018
+
+https://www.gitbook.com/book/safe-software/fme-desktop-basic-training-2018/edit#/edit/Desktop-Basic-2018/DesktopBasic0Introduction/0.00.CourseIntroduction.md?_k=86dxzp
+
+https://github.com/safesoftware/FMETraining.git/DesktopBasic0Introduction/0.00.CourseIntroduction.md
+
+https://github.com/safesoftware/FMETraining/blob/master/DesktopBasic0Introduction/0.00.CourseIntroduction.md
+--!>
