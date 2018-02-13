@@ -7,5 +7,5 @@ All mimsy were the borogoves,
 
 
 
-{{ readme }}
+{{ file.path }}
 
