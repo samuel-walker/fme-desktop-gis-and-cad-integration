@@ -5,6 +5,4 @@
 All mimsy were the borogoves,  
   And the mome raths outgrabe.
 
-
-
 {% include "./chapter2.md" %}
