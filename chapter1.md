@@ -1,3 +1,6 @@
-# First Chapter
+# The Jabberwocky
 
-GitBook allows you to organize your book into chapters, each chapter is stored in a separate file like this one.
+`Twas brillig, and the slithy toves
+  Did gyre and gimble in the wabe:
+All mimsy were the borogoves,
+  And the mome raths outgrabe.
