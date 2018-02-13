@@ -1,5 +1,3 @@
-# About This Document
-
 {% include "git+https://github.com/safesoftware/FMETraining.git/DesktopBasic0Introduction/0.00.CourseIntroduction.md" %}
 
 <!-- https://safe-software.gitbooks.io/fme-desktop-basic-training-2018/content/DesktopBasic0Introduction/0.00.CourseIntroduction.html
