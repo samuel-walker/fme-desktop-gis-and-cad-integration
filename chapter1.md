@@ -7,4 +7,4 @@ All mimsy were the borogoves,
 
 
 
-{{ file.path }}
+{% include "./chapter2.md" %}
