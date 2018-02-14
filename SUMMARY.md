@@ -1,7 +1,6 @@
 # Summary
 
-* [Introduction](README.md)
-  * [Course Introduction](0.00.CourseIntroduction.md)
+* [Introduction](0.00.Introduction.md)
   * [Course Overview](0.01.CourseOverview.md)
   * [Course Resources](0.02.CourseResources.md)
 * [Lecture](1.00.Lecture.md)
