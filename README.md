@@ -1,6 +1,6 @@
 # FME Desktop Training Module: GIS and CAD Integration
 
-This is the manual for the training module for Safe Software’s FME Desktop application focused on GIS and CAD integration.
+This is the manual for a training module for Safe Software’s FME Desktop application. It covers the basics of using FME and carying out GIS and CAD integration.
 
 The training will introduce basic concepts and terminology, help students become efficient users of FME, and direct you to resources to help apply the product to your own needs.
 
@@ -9,7 +9,7 @@ The training will introduce basic concepts and terminology, help students become
 The module is made up of three main sections. These sections are:
 
 * Lecture
-* Lab Instruction
+* Lab Demonstration
 * Lab Exercises
 
 ## Current Status

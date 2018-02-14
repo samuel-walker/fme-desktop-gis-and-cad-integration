@@ -1,3 +1,3 @@
 {% include "git+" + {{ path }} + "DesktopBasic0Introduction/0.00.CourseIntroduction.md" %}
 
-| truncate(6, true, "") %}
+| truncate(30, true, "") %}
