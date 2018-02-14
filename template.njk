@@ -4,10 +4,10 @@
 {% macro inc(path) %}
 {% set path = "['" + path + "']" %}
 {% path | replace("/","','") %}
-{% set folder = path[0] %}
-{% set file = path [1] %}
+{% set folder = path[path.length - 1] %}
+{% set file = path [path.length - 2] %}
 {% import "git+" + book.path + folder + file as content %} {# import md from manual page #}
 {% content | replace("![](./", "![](." + book.path + folderpath + "/") %} {# replace md image paths with less relative path #}
+{% endmacro %}
 
-{# Old approach, split before macro #}
-{% macro inc(folder, file) %}
+{# consider list also #}
