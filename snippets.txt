@@ -1,0 +1,34 @@
+https://github.com/safesoftware/FMETraining/
+
+{% include "git+" + {{ path }} + "DesktopBasic0Introduction/0.00.CourseIntroduction.md" %}
+
+| truncate(30, true, "") %}
+
+
+
+
+-original attempt-
+
+
+{# Append proper image tags with correct path #}
+{% replace "./"}
+[replace image tags, "./" with book.path + folderpath + "/"] {#should keep only parts needed #}
+[folderpath content before /]
+{% if path == "" %}
+{% replace %}
+
+{# on page, image(file.path) to send raw path #}
+
+
+
+{# template approach #}
+
+{% macro inc(folder, file) %}
+{% block content %}
+{% include "git+" + book.path + folder + file %}
+{% endblock %}
+
+{% content | replace() %}
+
+
+{# folder = path.substring(path.lastIndexOf('/')+1) %} #}
