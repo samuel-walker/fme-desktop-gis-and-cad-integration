@@ -1,4 +1,5 @@
 {
+  "plugins": ["gitbook-plugin-include-html"],
 	"variables": {
 		"path": "https://github.com/safesoftware/FMETraining.git/",
 		"img_path": "https://github.com/safesoftware/FMETraining/blob/master/",
