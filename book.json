@@ -1,5 +1,6 @@
 {
-  "variables": {
-    "path": "https://github.com/safesoftware/FMETraining.git/"
-  }
+	"variables": {
+		"path": "https://github.com/safesoftware/FMETraining.git/",
+		"img_path": "https://github.com/safesoftware/FMETraining/blob/master/"
+	}
 }

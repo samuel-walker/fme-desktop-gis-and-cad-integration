@@ -1,13 +1,48 @@
-{# Define a macro for importing existing manual content #}
-{# folderpath is a string with manual page's folder one level up in directory and then filename.md #}
-{# e.g. DesktopBasic1Basics/1.Exercise1.md #}
-{% macro inc(path) %}
-{% set path = "['" + path + "']" %}
-{% path | replace("/","','") %}
-{% set folder = path[path.length - 1] %}
-{% set file = path [path.length - 2] %}
-{% import "git+" + book.path + folder + file as content %} {# import md from manual page #}
-{% content | replace("![](./", "![](." + book.path + folderpath + "/") %} {# replace md image paths with less relative path #}
-{% endmacro %}
+{### Paste the lines below into the page you want to populate with content ###}
 
-{# consider list also #}
+{### Import include macro ###}
+{% import "../template.njk" as template %}
+{### Set path variable to desired exercise ###}
+{% set path = "DesktopBasic1Basics/1.Exercise1.html" %}
+{### Hacky, setting book path as a local variable so macro can access it ###}
+{% set bookpath = book.path %}
+{### Pass file path to include macro ###}
+{{ template.inc(path, bookpath) }}
+
+{###
+The rest is the macro that belongs in this file. It is not working.
+I can get the file path ok, but the include doesn't work.
+I tested this by using the same static include in both the page and the macro.
+The page include worked. The macro returned variables, but the include didn't work.
+Not sure what is going on.
+###}
+
+{### Define a macro for importing existing manual content ###}
+{% macro inc(path, bookpath) %}
+{### Turn path from page into file and folder strings ###}
+Path is: {{ path }}
+{% set path = path.split("/") %}
+Path is: {{ path }}
+{% set file = path[path.length-1].slice(0,-4) + "md" %}
+File is: {{ file }}
+{% set folder = path[path.length-2] %}
+Folder is: {{ folder }}
+{% set test = "git+" + bookpath + folder + "/" + file %}
+Git path is: {{ test }}
+{### Import md file from manual page using directory variables ###}
+# Include in macro:
+{% include "git+https://github.com/safesoftware/FMETraining.git/DesktopBasic1Basics/1.Exercise1.md" %}
+
+After include
+
+{###
+  {% import "git+" + bookpath + folder + "/" + file as content %}
+###}
+
+{### Find images in the md and replace with proper path
+  {{ content }}
+  {{ content | replace("![](./", "![](." + bookpath + "/" + folderpath + "/") }}
+###}
+
+End
+{% endmacro %}
