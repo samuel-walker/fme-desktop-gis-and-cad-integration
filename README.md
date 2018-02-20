@@ -18,8 +18,8 @@ All of this content is provided for instructors to use, adapt, and remix for the
 
 ## Current Status
 
-The current status of this manual is: **INCOMPLETE**: this manual should **NOT** be used for training.  
-This manual applies to **FME2018.0**.  
+The current status of this manual is: **INCOMPLETE**: this manual should **NOT** be used for training.
+This manual applies to **FME2018.0**.
 The status of each chapter is:
 
 * Introduction: Incomplete
@@ -31,5 +31,4 @@ The status of each chapter is:
 * Course Outline: Incomplete
 * FMEData: Incomplete
 
-_**NB**: Even for completed content, Safe Software Inc. assumes no responsibility for any errors in this document or their consequences, and reserves the right to make improvements and changes to this document without notice. See the full licensing agreement for further details._
-
+_**NB**: Even for completed content, Safe Software Inc. assumes no responsibility for any errors in this document or their consequences, and reserves the right to make improvements and changes to this document without notice. See the full licensing agreement in [About this Document](/CADGIS0About/0.00.About.md) for further details._
