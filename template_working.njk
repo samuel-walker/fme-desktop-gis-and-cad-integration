@@ -1,11 +1,11 @@
-{# Define a macro for importing existing manual content #}
+{### Define a macro for importing existing manual content ###}
 {% macro inc(path, bookpath) %}
-{# Turn path from page into file and folder strings #}
+{### Turn path from page into file and folder strings ###}
 {% set path = path.split(" ") %}
 {% set file = path[path.length-1] %}
 {% set folder = path[path.length-2] %}
-{# Import md file from manual page using file and folder (book.path is set in book.json) #}
+{### Import md file from manual page using file and folder (book.path is set in book.json) ###}
 {% import "git+" + bookpath + folder + file as content %}
-{# Find images in the md and replace with proper path #}
+{### Find images in the md and replace with proper path ###}
 {{ content | replace("![](./", "![](." + bookpath + folderpath + "/") }}
 {% endmacro %}
