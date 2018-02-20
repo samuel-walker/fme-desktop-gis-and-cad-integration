@@ -1,0 +1,9 @@
+{### Define a macro for importing existing manual content ###}
+{% macro inc(bookpath, path, branch) %}
+{### Turn path from page into file and folder strings ###}
+{% set path = path.split("/") %}
+{% set file = path[path.length-1] %}
+{% set folder = path[path.length-2] %}
+{### Include md file from manual using file, folder, and branch ###}
+{% include "git+" + bookpath + folder + file + "#" + branch %}
+{% endmacro %}
