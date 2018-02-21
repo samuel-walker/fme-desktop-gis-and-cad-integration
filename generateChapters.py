@@ -15,7 +15,7 @@ with open('chapters.csv', 'r') as csvfile: # open csv
         md_read = open(row[1] + "_read.md","r") # open downloaded md file
         md_write = open(row[1],"w") # new temp md file
         for line in md_read: # iterate on md file lines
-            line = line.replace("![](./", "![](./" + row[0].split("/")[0] + "/") # replace relative with absolute paths
+            line = line.replace("![](./", "![](../" + row[0].split("/")[0] + "/") # replace relative with absolute paths
             md_write.write(line) # print line in temp file
         md_write.close() # close temp file
         md_read.close() # close md file
