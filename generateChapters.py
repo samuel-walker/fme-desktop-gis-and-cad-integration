@@ -1,5 +1,6 @@
 # For python 2.7
 
+import os # lib for operating system operations
 import csv # lib for reading csv
 import urllib  # lib for reading url as file
 
@@ -10,11 +11,15 @@ with open('chapters.csv', 'r') as csvfile: # open csv
     data = csv.reader(csvfile, delimiter=',') # define csvreader
     for row in data: # iterate on urls to generate chapters
         md = urllib.URLopener() # start url reader
-        md.retrieve(bookpath + branch + row[0], row[1] + "-test.md") #download md file
-        md2 = open(row[1] + "-test.md","r") # open downloaded md file
-        md_temp = open(row[1] + "-write.md","w") # new temp md file
-        for line in md2: # iterate on md file lines
-            line.replace("![](./", "![](." + row[0]) # replace relative with absolute paths
-            md_temp.write(line) # print line in temp file
-        md_temp.close() # close temp file
-        md2.close() # close md file
+        md.retrieve(bookpath + branch + row[0], row[1] + "_read.md") #download md file
+        md_read = open(row[1] + "_read.md","r") # open downloaded md file
+        md_write = open(row[1],"w") # new temp md file
+        for line in md_read: # iterate on md file lines
+            line = line.replace("![](./", "![](./" + row[0].split("/")[0] + "/") # replace relative with absolute paths
+            md_write.write(line) # print line in temp file
+        md_write.close() # close temp file
+        md_read.close() # close md file
+        os.remove(row[1] + "_read.md")
+
+# In case we need direct link, takes form e.g.:
+# https://github.com/safesoftware/FMETraining/raw/master/DesktopBasic1Basics/Images/Img1.01.WhatIsFME.png
