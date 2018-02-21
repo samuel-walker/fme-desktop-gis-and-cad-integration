@@ -15,7 +15,5 @@ _book
 *.mobi
 *.pdf
 
-# Test files
-loadPage.js
-template_working.njk
-template.njk
+# Test files directory
+/Test/*
