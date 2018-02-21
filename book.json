@@ -1,11 +1,5 @@
 {
-  "plugins": ["include-html", "scripts"],
-  "pluginsConfig": {
-    "scripts": {
-      "files": ["./generateChapter.js"]
-      }
-  },
-	"variables": {
+  "variables": {
 		"path": "https://github.com/safesoftware/FMETraining.git/",
 		"img_path": "https://github.com/safesoftware/FMETraining/blob/master/",
 		"basic_branch": "Desktop-Basic-2018"
