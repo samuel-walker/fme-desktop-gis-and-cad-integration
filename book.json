@@ -2,7 +2,7 @@
   "plugins": ["include-html", "scripts"],
   "pluginsConfig": {
     "scripts": {
-      "files": ["./generateChapters.js"]
+      "files": ["./generateChapter.js"]
       }
   },
 	"variables": {
