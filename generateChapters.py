@@ -21,5 +21,5 @@ with open('chapters.csv', 'r') as csvfile: # open csv
         md_read.close() # close md file
         os.remove(row[1] + "_read.md")
 
-# In case we need direct link, takes form e.g.:
+# In case I ever need a direct link, it takes form e.g.:
 # https://github.com/safesoftware/FMETraining/raw/master/DesktopBasic1Basics/Images/Img1.01.WhatIsFME.png
