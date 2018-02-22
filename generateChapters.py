@@ -1,13 +1,17 @@
 # For python 2.7
 
+# import required modules
 import os # lib for operating system operations
 import csv # lib for reading csv
 import urllib  # lib for reading url as file
+import re # regex
 
-# update if repo changes
+# define variables
+# update bookpath if repo changes
 bookpath = "https://raw.githubusercontent.com/safesoftware/FMETraining/"
 branch = "Desktop-Basic-2018/" # update for current branch/version
 
+# download md files from other books, edit their image paths, save to this book
 with open('chapters.csv', 'r') as csvfile: # open csv
     data = csv.reader(csvfile, delimiter=',') # define csvreader
     for row in data: # iterate on urls to generate chapters
@@ -27,17 +31,17 @@ with open('chapters.csv', 'r') as csvfile: # open csv
             md_read.close() # close md file
             os.remove(row[8] + "_read.md")
 
-# generate summary.md
+# generate summary.md to create book structure
+summary = open("SUMMARY.md","w") # open summary.md to write
+summary.write("# Summary \n\n") # write summary title
 with open('chapters.csv', 'r') as csvfile: # open csv
     data = csv.reader(csvfile, delimiter=',') # define csvreader
     for row in data: # read rows in csv
         # camel case to spaces (not working with file exts)
-        title = row[6]
-        # title = row[1].re.sub("([a-z])([A-Z])","\g<1> \g<2>",row[1])
-        summary = open("SUMMARY.md","w") # open summary.md to write
-        summary.write("# Summary \n\n") # write summary title
+        title = re.sub("([a-z])([A-Z])","\g<1> \g<2>",row[6])
         # write link in summary with proper indentation
-        summary.write(" "*int(row[3]) + "* [" + title[5:-3] + "](" + row[8] + ")\n")
+        summary.write(2*int(row[3])*" " + "* [" + title[5:-3] + "](" + row[8] + ")\n")
+summary.close() # close summary.md
 
 # currently assuming csv can read as int or str
 # could also do indent as if elif else statements instead:
