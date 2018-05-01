@@ -4,9 +4,9 @@ This is the manual for a training module for Safe Software’s FME Desktop appli
 
 The training will introduce basic concepts and terminology, help students become efficient users of FME, and direct them to resources to help apply the product to their own needs.
 
-## Course Structure
+## Module Structure
 
-The full course is made up of three main sections. These sections are:
+The full module is made up of three main sections. These sections are:
 
 - Lecture
 - Lab Instruction
@@ -18,15 +18,26 @@ The **Lab Demonstration** section provides a walkthrough of how to use FME and i
 
 Finally, the **Lab Exercises** section provides hands-on activities for students to complete during lab time or as assignments. It contains questions; instructors may access the answers for use in grading [here]().
 
-## Course Audience
+## Module Audience
 
-This course is aimed at a second- to fourth-year university or college student audience. Students should have a passing familiarity with CAD and/or GIS technology. Prior knowledge of FME is not required. If the instructor wishes to adapt the course to a higher level the lecture and lab demonstration content can be shortened.
+This module is aimed at a second- to fourth-year university or college student audience. Students should have a passing familiarity with CAD and/or GIS technology. Prior knowledge of FME is not required. If the instructor wishes to adapt the module to a higher level the lecture and lab demonstration content can be shortened.
 
-## Course Length
+## Module Length
 
-The instructor may choose to cover as many of these sections as they feel are required, or possible in the time permitted. They may also cover the course content in a different order and will skip or add new content to better customize the course to your needs. Therefore, the length and content of the course may vary.
+The instructor may choose to cover as many of these sections as they feel are required, or possible in the time permitted. They may also cover the module content in a different order and will skip or add new content to better customize the module to your needs. Therefore, the length and content of the module may vary.
 
-All of this content is provided for instructors to use, adapt, and remix for their own courses. Please note that this use does come with some legal caveats, explained in [About this Document](/CADGIS0About/0.00.AboutThisDocument.md).
+All of this content is provided for instructors to use, adapt, and remix for their own modules. Please note that this use does come with some legal caveats, explained in [About this Document](/CADGIS0About/0.00.AboutThisDocument.md).
+
+## Adapting this Module
+
+All of this content is provided for instructors to use, adapt, and remix for their own modules. Please note that this use does come with some legal caveats, explained in [About this Document](/CADGIS0About/0.00.AboutThisDocument.md).
+
+If you wish to change the content of the manual, you can fork the [GitHub repository](). The manual is created using the [Gitbook toolchain](https://toolchain.gitbook.com/) and is written in easily editable [Markdown](https://daringfireball.net/projects/markdown/). [Detailed instructions on adapting this content]() are also available if you are unfamiliar with GitHub and/or Markdown.
+
+Some suggestions for adaptation:
+- Localize the exercise data to your country or city. A list of open data portals is available [here](https://www.opendatasoft.com/a-comprehensive-list-of-all-open-data-portals-around-the-world/).
+  - If you do change the data, feel free to modify the [Module Resources](CADGIS0About\0.02.CourseResources.md) page.
+- If it fits your course better, you could only cover translation to DGN or DWG. If you prefer to grade close-ended questions, you could write those for the scenario exercise.
 
 ## Current Status
 
@@ -40,7 +51,7 @@ The status of each chapter is:
 * Lab Demonstration: Incomplete
 * Lab Exercises: Incomplete
 * Slides: Incomplete
-* Course Outline: Incomplete
+* Module Outline: Incomplete
 * FMEData: Incomplete
 
 _**NB**: Even for completed content, Safe Software Inc. assumes no responsibility for any errors in this document or their consequences, and reserves the right to make improvements and changes to this document without notice. See the full licensing agreement in [About this Document](/CADGIS0About/0.00.AboutThisDocument.md) for further details._

@@ -1,12 +1,12 @@
 source_folder,source_file,chapter,section,file,destination_folder,destination_file,source,destination
 ,AboutThisDocument,0,0,00,CADGIS0About,0.00.AboutThisDocument.md,,CADGIS0About/0.00.AboutThisDocument.md
-,CourseOverview,0,1,01,CADGIS0About,0.01.CourseOverview.md,,CADGIS0About/0.01.CourseOverview.md
-,CourseResources,0,1,02,CADGIS0About,0.02.CourseResources.md,,CADGIS0About/0.02.CourseResources.md
+,ModuleOverview,0,1,01,CADGIS0About,0.01.ModuleOverview.md,,CADGIS0About/0.01.ModuleOverview.md
+,ModuleResources,0,1,02,CADGIS0About,0.02.ModuleResources.md,,CADGIS0About/0.02.ModuleResources.md
 ,Lecture,1,0,00,CADGIS1Lecture,1.00.Lecture.md,,CADGIS1Lecture/1.00.Lecture.md
 ,CADGISIntegration,1,1,01,CADGIS1Lecture,1.01.CADGISIntegration.md,,CADGIS1Lecture/1.01.CADGISIntegration.md
 DesktopBasic1Basics,1.01.WhatIsFME.md,1,1,02,CADGIS1Lecture,1.02.WhatIsFME.md,DesktopBasic1Basics/1.01.WhatIsFME.md,CADGIS1Lecture/1.02.WhatIsFME.md
-DesktopBasic2Transformation,2.00.DataTransformation.md,1,1,03,CADGIS1Lecture,1.02.DataTransformation.md,DesktopBasic2Transformation/2.00.DataTransformation.md,CADGIS1Lecture/1.02.DataTransformation.md
-DesktopBasic2Transformation,2.01.WhatIsDataTransformation.md,1,2,04,CADGIS1Lecture,1.03.WhatIsDataTransformation.md,DesktopBasic2Transformation/2.01.WhatIsDataTransformation.md,CADGIS1Lecture/1.03.WhatIsDataTransformation.md
+DesktopBasic2Transformation,2.00.DataTransformation.md,1,1,03,CADGIS1Lecture,1.03.DataTransformation.md,DesktopBasic2Transformation/2.00.DataTransformation.md,CADGIS1Lecture/1.03.DataTransformation.md
+DesktopBasic2Transformation,2.01.WhatIsDataTransformation.md,1,2,04,CADGIS1Lecture,1.04.WhatIsDataTransformation.md,DesktopBasic2Transformation/2.01.WhatIsDataTransformation.md,CADGIS1Lecture/1.04.WhatIsDataTransformation.md
 ,LabDemonstration,2,0,00,CADGIS2LabDemonstration,2.00.LabDemonstration.md,,CADGIS2LabDemonstration/2.00.LabDemonstration.md
 DesktopBasic1Basics,1.02.FMEDesktopComponents.md,2,1,01,CADGIS2LabDemonstration,2.01.FMEDesktopComponents.md,DesktopBasic1Basics/1.02.FMEDesktopComponents.md,CADGIS2LabDemonstration/2.01.FMEDesktopComponents.md
 DesktopBasic1Basics,1.03.IntroductionToWorkbench.md,2,1,02,CADGIS2LabDemonstration,2.02.IntroductionToWorkbench.md,DesktopBasic1Basics/1.03.IntroductionToWorkbench.md,CADGIS2LabDemonstration/2.02.IntroductionToWorkbench.md
