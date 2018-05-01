@@ -1,8 +1,8 @@
-# Summary
+# Summary 
 
 * [About This Document](CADGIS0About/0.00.AboutThisDocument.md)
-  * [Course Overview](CADGIS0About/0.01.CourseOverview.md)
-  * [Course Resources](CADGIS0About/0.02.CourseResources.md)
+  * [Module Overview](CADGIS0About/0.01.ModuleOverview.md)
+  * [Module Resources](CADGIS0About/0.02.ModuleResources.md)
 * [Lecture](CADGIS1Lecture/1.00.Lecture.md)
   * [CADGIS Integration](CADGIS1Lecture/1.01.CADGISIntegration.md)
   * [What Is FME](CADGIS1Lecture/1.02.WhatIsFME.md)

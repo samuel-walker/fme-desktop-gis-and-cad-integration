@@ -1,0 +1,92 @@
+		<div class="kbentry post row-fluid" id="kbentry-22435">
+			<div class="kbentry-body node-body span11">
+				<div class="extendedTextField">
+					Article created with FME Desktop 2018.0
+				</div>
+				<h1></h1>
+				<h1>Introduction</h1>
+				<h3></h3>
+				<p>How your AutoCAD drawing file is interpreted by FME is largely dependent on which reader parameters are selected. Additionally, why you want to have your AutoCAD file interpreted a certain way is largely dependent on the type of translation you are performing and what you want in the output. Below are some brief descriptions of the main basic reader parameter options.</p>
+				<p>The major ways that we choose to read an AutoCAD drawing file are based on:</p>
+				<ul>
+					<li>how we want to group our entities and</li>
+					<li>whether or not we want to explode blocks.</li>
+				</ul>
+				<p>In this article we'll examine how we can group entities.</p>
+				<h1>Downloads</h1>
+				<h3></h3>
+				<p><a href="https://knowledge.safe.com/storage/attachments/2185-roads.dwg" target="_blank">roads.dwg</a></p>
+				<h1>Source Data</h1>
+				<h3></h3>
+				<p>The data used in this tutorial originates from open data made available by the <a href="http://data.vancouver.ca/">City of Vancouver</a>, British Columbia. It contains information licensed under the Open Government License - Vancouver.</p>
+				<h1>Step-by-Step Instructions</h1>
+				<h3></h3>
+				<p>Let's take a closer look at what each of the entity grouping options look like in the Data Inspector, and how that will affect your translation. We will do this by examining the 'Group Entities By' parameter in the DWG/DXF reader.</p>
+				<p><strong>1) Group Entities By Layer Name</strong></p>
+				<p>Open the FME Data Inspector and select the Open Data Set icon, or use the File &gt; Open Dataset menu option.</p>
+				<p>In the Open Dataset dialog, select Autodesk AutoCAD DWG/DXF for the format and the roads.dwg file as the dataset.</p>
+				<p>Click on the Parameters button.</p>
+				<p>For Group Entities By, choose the Layer Name option (this is the default).</p>
+				<p><img src="/storage/attachments/2186-1532-reader-parameters.png" style="background-color: initial;"></p>
+				<p>If a user chooses to group their AutoCAD entities by layer name, then FME will treat each layer as an FME Feature Type in the workspace. Note that when viewed in FME Data Inspector, you are not able to see the associated attribute information in the layers. This is because the attribute schema is not considered when grouping by Layer Name. This is the default parameter for reading DWG files.</p>
+				<p><img src="/storage/attachments/1276-gb-layername-noschema.png"></p>
+				<p><em>Group by Layer Name as viewed in the FME Data Inspector. Note that the data is grouped by layer in the Display Control window, but there is no attribute schema.</em></p>
+				<h3></h3>
+				<p><strong>2) Group Entities By Parameter Geometry</strong></p>
+				<p>Keep the Data Inspector open and open the dataset again (it will open in a new View tab). Select the Open Data Set icon, or use the File &gt; Open Dataset menu option.</p>
+				<p>In the Open Dataset dialog, select AutoCAD DWG/DXF for the format and the roads.dwg file as the dataset.</p>
+				<p>Click on the Parameters button.</p>
+				<p>For <strong>Group Entities By</strong>, choose the <strong>Geometry</strong> option.</p>
+				<p><img src="/storage/attachments/2188-geometry.png" style="background-color: initial;"></p>
+				<p>If a user chooses to group entities by geometry, then entities will be sorted by their geometry types (e.g. points, lines, text etc.) and these geometry types will become the FME Feature Types in the workspace.</p>
+				<p>Note that in Workbench, all geometry types will be listed unless you specifically select which geometry types you want to be read. When inspecting data grouped by Geometry, the FME Data Inspector will automatically only display the geometry types present in your DWG.</p>
+				<p><img src="/storage/attachments/1277-gb-geometry-canvas.png" style="background-color: initial;"></p>
+				<p><em>Group by Geometry as viewed in Workbench.</em></p>
+				<p><img src="/storage/attachments/1278-gb-geometry-inspector.png" style="background-color: initial;"></p>
+				<p><em>Group by Geometry as viewed in the FME Data Inspector. Note that only line geometries are read.</em></p>
+				<p><strong>3) Group Entities By Attribute Schema</strong><em><br></em></p>
+				<p>Keep the Data Inspector open and open the dataset again (it will open in a new View tab). Select the Open Data Set icon, or use the File &gt; Open Dataset menu option.</p>
+				<p>In the Open Dataset dialog, select AutoCAD DWG/DXF for the format and the roads.dwg file as the dataset.</p>
+				<p>Click on the Parameters button.</p>
+				<p>For <strong>Group Entities By</strong>, choose the <strong>Attribute Schema</strong> option.</p>
+				<p><img src="/storage/attachments/2189-attrschema.png"></p>
+				<p>If a user chooses to group entities by Attribute Schema, then FME will group entities not only by their layer name, but also by their associated attribute information. When viewed in the Data Inspector, the data will be displayed much like when grouping by Layer Name, but will also show the attribute schema in the Table View.</p>
+				<p><img src="/storage/attachments/1279-gb-attributeschema-inspector.png"></p>
+				<p><em>Group by Attribute Schema as viewed in the FME Data Inspector.</em> <em>Note that the attribute data is now visible in the Table View and the data is grouped by layer.</em></p>
+				<p></p>
+				<p></p>
+				<p></p>
+			</div>
+			<div class="comment-tools hidden">
+				<span class="add-comment-link"><a href="#">thub.nodes.view.add-new-comment</a></span>
+			</div>
+		</div>
+		<div id="kb-tags-block">
+			<span class="tags" id="id_tags_container"><a class="tag" href="/topics/autocad+dwg.html" rel="topic">autocad dwg</a><a class="tag" href="/topics/cad.html" rel="topic">cad</a></span>
+		</div>
+		<div class="node-attachments">
+			<div class="node-attachment">
+				<span class="img-attachment-icon"></span> <a href="/storage/attachments/1276-gb-layername-noschema.png">gb-layername-noschema.png</a> <span>(265.5 kB)</span>
+			</div>
+			<div class="node-attachment">
+				<span class="img-attachment-icon"></span> <a href="/storage/attachments/1277-gb-geometry-canvas.png">gb-geometry-canvas.png</a> <span>(76.1 kB)</span>
+			</div>
+			<div class="node-attachment">
+				<span class="img-attachment-icon"></span> <a href="/storage/attachments/1278-gb-geometry-inspector.png">gb-geometry-inspector.png</a> <span>(298.2 kB)</span>
+			</div>
+			<div class="node-attachment">
+				<span class="img-attachment-icon"></span> <a href="/storage/attachments/1279-gb-attributeschema-inspector.png">gb-attributeschema-inspector.png</a> <span>(296.1 kB)</span>
+			</div>
+			<div class="node-attachment">
+				<span class="img-attachment-icon"></span> <a href="/storage/attachments/2186-1532-reader-parameters.png">1532-reader-parameters.png</a> <span>(14.7 kB)</span>
+			</div>
+			<div class="node-attachment">
+				<span class="img-attachment-icon"></span> <a href="/storage/attachments/2188-geometry.png">geometry.png</a> <span>(15.1 kB)</span>
+			</div>
+			<div class="node-attachment">
+				<span class="img-attachment-icon"></span> <a href="/storage/attachments/2189-attrschema.png">attrschema.png</a> <span>(12.2 kB)</span>
+			</div>
+			<div class="node-attachment">
+				<span class="attachment-icon"></span> <a href="/storage/attachments/2185-roads.dwg">roads.dwg</a> <span>(583.3 kB)</span>
+			</div>
+		</div>
