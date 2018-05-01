@@ -43,10 +43,12 @@ with open('chapters.csv', 'r') as csvfile: # open csv
             os.remove(read)
             html_read.close()
             # use pandoc to convert to md
-            subprocess.run("pandoc " + write + " --extract-media=images --strip-comments -f html-native_divs-native_spans -t markdown -o "
-                                    + write[:-5] + ".md",
-                                    check=True,
-                                    shell=True)
+            subprocess.run("pandoc " + write + " --extract-media=" +
+                           row[8].rsplit('/', 1)[-2]
+                           + "/Images --strip-comments -f html-native_divs-native_spans -t markdown -o "
+                           + write[:-5] + ".md",
+                           check=True,
+                           shell=True)
             os.remove(write)
         else:
             # check if directory exists, make it if not
