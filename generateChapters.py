@@ -36,7 +36,7 @@ with open('chapters.csv', 'r') as csvfile: # open csv
                 # extract div
                 soup = bs4.BeautifulSoup(html_read, "html.parser")
                 div = soup.find("div", {"class": "kbentry post row-fluid"})
-                content = div.prettify().replace("=\"/storage/attachments/", "=\"https://knowledge.safe.com/storage/attachments/")
+                content = div.prettify() #.replace("=\"/storage/attachments/", "=\"https://knowledge.safe.com/storage/attachments/")
                 html_write.write(str(content)) # .encode('utf-8')))
             # close files
             html_write.close()
@@ -49,6 +49,23 @@ with open('chapters.csv', 'r') as csvfile: # open csv
                            + write[:-5] + ".md",
                            check=True,
                            shell=True)
+            # open md files
+            read = row[8][:-3] + "_read.md"
+            write = row[8][:-3] + ".md"
+            with open(read, "r", encoding="utf8") as md_read: #
+                md_write = open(write, "w", encoding="utf8")
+                # extract div
+                for line in md_read:
+                    # md replacements
+                    line.replace("![](" + row[5], "")
+                    line.replace("###", "")
+                    line.repalce("Article created with FME Desktop 2018.0", "")
+                    line.replace("[thub.nodes.view.add-new-comment](#)", "")
+                    md_write.write(line) # .encode('utf-8')))
+            # close files and delete them
+            md_write.close()
+            os.remove(read)
+            md_read.close()
             os.remove(write)
         else:
             # check if directory exists, make it if not
