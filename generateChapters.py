@@ -9,10 +9,16 @@ import wget # for downloading files
 import bs4 # beautifulsoup4 for scraping KC
 import subprocess # for calling pandoc from cmd
 
-# function to split camel case string to list
+# method to split camel case string to list
 def camel_case_split(identifier):
     matches = re.finditer('.+?(?:(?<=[a-z])(?=[A-Z])|(?<=[A-Z])(?=[A-Z][a-z])|$)', identifier)
     return [m.group(0) for m in matches]
+
+# method to replace all items in a dic [item, replace] in text
+def replace_all(text, dic):
+    for i, j in dic.iteritems():
+        text = text.replace(i, j)
+    return text
 
 # define variables
 # update bookpath if repo changes
@@ -36,17 +42,18 @@ with open('chapters.csv', 'r') as csvfile: # open csv
                 # extract div
                 soup = bs4.BeautifulSoup(html_read, "html.parser")
                 div = soup.find("div", {"class": "kbentry post row-fluid"})
-                content = div.prettify() #.replace("=\"/storage/attachments/", "=\"https://knowledge.safe.com/storage/attachments/")
+                content = div.prettify().replace("=\"/storage/attachments/",
+                                                 "=\"https://knowledge.safe.com/storage/attachments/")
                 html_write.write(str(content)) # .encode('utf-8')))
-            # close files
+            # close files, delete temp
             html_write.close()
-            os.remove(read)
             html_read.close()
+            os.remove(read)
             # use pandoc to convert to md
             subprocess.run("pandoc " + write + " --extract-media=" +
                            row[8].rsplit('/', 1)[-2]
                            + "/Images --strip-comments -f html-native_divs-native_spans -t markdown -o "
-                           + write[:-5] + ".md",
+                           + write[:-5] + "_read.md",
                            check=True,
                            shell=True)
             # open md files
@@ -57,16 +64,23 @@ with open('chapters.csv', 'r') as csvfile: # open csv
                 # extract div
                 for line in md_read:
                     # md replacements
-                    line.replace("![](" + row[5], "")
-                    line.replace("###", "")
-                    line.repalce("Article created with FME Desktop 2018.0", "")
-                    line.replace("[thub.nodes.view.add-new-comment](#)", "")
+                    # w_dic = {"![](" + row[5]:"",
+                    #          "###":"",
+                    #          "Article created with FME Desktop 2018.0":"",
+                    #          "[thub.nodes.view.add-new-comment](#)":""
+                    #          }
+                    # line = replace_all(line, w_dic)
+                    # text = replace_all(line, c_dic)
+                    line = line.replace("![](" + row[5] + "/", "![](")
+                    line = line.replace("###", "")
+                    line = line.replace("Article created with FME Desktop 2018.0", "")
+                    line = line.replace("[thub.nodes.view.add-new-comment](#)", "")
                     md_write.write(line) # .encode('utf-8')))
             # close files and delete them
             md_write.close()
             os.remove(read)
             md_read.close()
-            os.remove(write)
+            os.remove(row[8][:-3] + ".html")
         else:
             # check if directory exists, make it if not
             if not os.path.exists(row[5]):
