@@ -1,4 +1,6 @@
 #!/usr/bin/env
+# requires pandoc installed and added to path
+# likely doesn't work on Unix systems due to filepaths
 
 # import required modules
 import os # lib for operating system operations
@@ -75,6 +77,12 @@ with open('chapters.csv', 'r') as csvfile: # open csv
                     line = line.replace("###", "")
                     line = line.replace("Article created with FME Desktop 2018.0", "")
                     line = line.replace("[thub.nodes.view.add-new-comment](#)", "")
+                    # below here: specific to CAD, should make external file
+                    line = line.replace("***Note:** this video was created with FME version 2016.0. Some of the","")
+                    line = line.replace("steps might be slightly different, but the overall process is the same.","")
+                    line = line.replace("The instructions below are for 2018.0.*","")
+                    line = line.replace("tutorial","exercise")
+                    line = line.replace("article","exercise")
                     md_write.write(line) # .encode('utf-8')))
             # close files and delete them
             md_write.close()
