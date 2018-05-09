@@ -1,4 +1,4 @@
-# Summary 
+# Summary
 
 * [About This Document](CADGIS0About/0.00.AboutThisDocument.md)
   * [Module Overview](CADGIS0About/0.01.ModuleOverview.md)
@@ -35,7 +35,7 @@
   * [Data Inspection From Workbench](CADGIS2LabDemonstration/2.24.DataInspectionFromWorkbench.md)
   * [Coordinate System Transformation](CADGIS2LabDemonstration/2.25.CoordinateSystemTransformation.md)
 * [Lab Exercises](CADGIS3LabExercises/3.00.LabExercises.md)
-  * [Getting Started With Auto CAD](CADGIS3LabExercises/3.01.GettingStartedWithAutoCAD.md)
+  * [Getting Started With AutoCAD](CADGIS3LabExercises/3.01.GettingStartedWithAutoCAD.md)
     * [Grouping Entities In DWG](CADGIS3LabExercises/3.02.GroupingEntitiesInDWG.md)
     * [Handling Blocks In DWG](CADGIS3LabExercises/3.03.HandlingBlocksInDWG.md)
     * [DWG To DGN](CADGIS3LabExercises/3.04.DWGToDGN.md)
